@@ -82,11 +82,11 @@ $(document).ready(function () {
             }
             clearField();
         } else if (gif === "") {
+            return false;
             alert("Field is missing, please try again.");
-            return false;
         } else {
-            alert("That tag already exists! Please add a new tag.");
             return false;
+            alert("That tag already exists! Please add a new tag.");
         }
 
         renderButtons();
