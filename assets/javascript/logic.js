@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-    var gifs = ["random", "animals", "food", "memes"];
+    var gifs = ["random", "animals", "food", "memes", "mood", "the office"];
 
     function displayGIF() {
 
@@ -19,8 +19,8 @@ $(document).ready(function () {
             var results = response.data;
 
             for (var i = 0; i < results.length; i++) {
-            
-                var gifDiv = $("<div>");
+
+                var gifBlock = $("#gifs-here");
                 var gifClip = $("<img>");
                 var rTag = $("<p>").text(`Rated: ${results[i].rating}`);
 
@@ -29,10 +29,8 @@ $(document).ready(function () {
                 gifClip.attr("data-animate", results[i].images.fixed_height.url);
                 gifClip.attr("data-state", "still");
                 gifClip.attr("class", "gif");
-                gifDiv.append(gifClip);
-                gifDiv.append(rTag);
-
-                $("#gifs-here").append(gifDiv);
+                gifBlock.append(gifClip);
+                gifBlock.append(rTag);
 
             }
 
@@ -50,7 +48,7 @@ $(document).ready(function () {
                 }
 
             })
-                
+
         });
 
     }
@@ -79,13 +77,21 @@ $(document).ready(function () {
 
         if (gifs.indexOf(gif) === -1) {
             gifs.push(gif);
+            function clearField() {
+                $("#gif-input").val("");
+            }
+            clearField();
+        } else if (gif === "") {
+            alert("Field is missing, please try again.");
+            return false;
         } else {
             alert("That tag already exists! Please add a new tag.");
+            return false;
         }
 
         renderButtons();
 
-    })
+    });
 
 
     $(document).on("click", ".gifs", displayGIF);

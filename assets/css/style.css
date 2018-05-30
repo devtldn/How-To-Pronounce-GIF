@@ -1,0 +1,113 @@
+nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: auto;
+    z-index: 100;
+    background: url("https://media.giphy.com/media/A9lgUYVqLeRb2/giphy.gif");
+    background-repeat: repeat;
+    background-position-x: 35rem;
+    position: fixed;
+    min-width: auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    position: relative;
+    margin-top: 8rem;
+    background-color: white;
+
+}
+
+#fixed-sidebar {
+    position: fixed;
+    max-width: 225px;
+}
+
+#giflab {
+    font-family: 'Poiret One', cursive;
+    color: white;
+    font-size: 48px;
+    text-decoration: none;
+    letter-spacing: 5px;
+}
+
+#giflab:hover {
+    cursor: crosshair;
+    text-shadow: 0 0 5px white;
+}
+
+.gifs {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 10px;
+    background-color: rgb(0, 224, 93);
+    border: none;
+    color: white;
+    padding: 0 15px;
+    margin: 2px;
+    max-width: auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    
+}
+
+.gifs:hover {
+    color: rgb(0, 224, 93);
+    background-color: white;
+    text-transform: uppercase;
+}
+label {
+    margin: 0;
+}
+
+#gif-form {
+    font-family: 'Comfortaa', cursive;
+    font-size: 22px;
+}
+
+#gif-input {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 16px;
+    max-width: 200px;
+}
+
+#add-gif {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    padding: 0;
+    margin: 0;
+}
+
+#add-gif:hover {
+    transform-style: preserve-3d;
+    transform: rotateY(-180deg);
+    transition-duration: 2s;
+}
+
+#gifs-here {
+    position: relative;
+}
+
+p {
+    font-family: 'Comfortaa', cursive;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+img {
+	transform: scale(1);
+	transition: .2s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.15);
+}

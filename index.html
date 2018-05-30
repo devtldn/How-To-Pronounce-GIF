@@ -19,30 +19,45 @@
     <!-- Local JS -->
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
 
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Poiret+One|Quicksand|Varela+Round" rel="stylesheet">
+
     <title>#TEAMJIF</title>
 </head>
 
 <body>
-    <div>
-        <div>
-            <form id="gif-form">
-                <label for="gif-input">
-                    Add a new tag:
-                </label>
-                <input type="text" id="gif-input">
-                <input id="add-gif" type="submit" value="+">
-            </form>
-        </div>
-        <div id="gif-tags">
+    <nav>
+        <a href="./index.html" id="giflab">.GIF-LAB</a>
+    </nav>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+
+            </div>
+            <div id="fixed-sidebar">
+                <form id="gif-form">
+                    <label for="gif-input">
+                        Add a new tag:
+                    </label>
+                    <input type="text" id="gif-input">
+                    <button id="add-gif" type="submit">
+                        +
+                    </button>
+                </form>
+                
+                <br>
+                <br>
+                
+                <div id="gif-tags">
+                
+                </div>
+            </div>
+            <div class="col-sm-8" id="gifs-here">
+
+            </div>
         </div>
     </div>
-
-    <div id="gifs-here">
-
-    </div>
-    
-
 </body>
 
 </html>
